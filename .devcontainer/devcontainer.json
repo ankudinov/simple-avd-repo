@@ -13,7 +13,7 @@
 		"ghcr.io/devcontainers/features/docker-in-docker:1": {
             "version": "latest"
         }
-	},
+	}
     // import image
-    "postCreateCommand": "bash -c \"$(docker import /home/vscode/ar_downloads/cEOS-lab-4.29.3M.tar.xz ceos-lab:latest)\""
+    // "postCreateCommand": "bash -c \"$(docker import /home/vscode/ar_downloads/cEOS-lab-4.29.3M.tar.xz ceos-lab:latest)\""
 }
