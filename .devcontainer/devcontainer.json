@@ -11,5 +11,7 @@
 	"workspaceFolder": "${localWorkspaceFolder}",
     "features": {
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-	}
+	},
+    // import image
+    "postCreateCommand": "bash -c \"$(docker import /home/vscode/ar_downloads/cEOS-lab-4.29.3M.tar.xz ceos-lab:latest)\""
 }
