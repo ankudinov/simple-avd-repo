@@ -7,8 +7,8 @@
 	// 	"--pid=host",
 	// 	"--privileged"
     // ],
-	"workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind",
-	"workspaceFolder": "${localWorkspaceFolder}",
+	// "workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind",
+	// "workspaceFolder": "${localWorkspaceFolder}",
     "features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:1": {
             "version": "latest"
