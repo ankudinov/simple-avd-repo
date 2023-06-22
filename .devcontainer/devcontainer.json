@@ -1,16 +1,18 @@
 {
     "name": "clab-test",
     "image": "ghcr.io/ankudinov/my_clab_container/avd_clab:avd4.1.0_clab0.37.1",
-    "runArgs": [
-        // add flags required to run cLab on docker-outside-of-docker
-        "--network=host",
-		"--pid=host",
-		"--privileged"
-    ],
+    // "runArgs": [
+    //     // add flags required to run cLab on docker-outside-of-docker
+    //     "--network=host",
+	// 	"--pid=host",
+	// 	"--privileged"
+    // ],
 	"workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind",
 	"workspaceFolder": "${localWorkspaceFolder}",
     "features": {
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest"
+        }
 	},
     // import image
     "postCreateCommand": "bash -c \"$(docker import /home/vscode/ar_downloads/cEOS-lab-4.29.3M.tar.xz ceos-lab:latest)\""
