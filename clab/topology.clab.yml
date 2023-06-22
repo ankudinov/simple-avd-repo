@@ -1,4 +1,4 @@
-name: avd_lab
+name: simple-avd-lab
 
 mgmt:
   network: custom_mgmt
